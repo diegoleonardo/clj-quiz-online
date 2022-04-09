@@ -9,8 +9,7 @@
   (handle [this event]
     (let [mailer-client (:mailer (:deps this))]
       (println "mailer" mailer-client)
-      (mailer/send mailer-client (:email event) (str "Hi " (:user-name event) ", your grade in the quiz is: " (:grade event)))
-      {:mailer mailer-client})))
+      (mailer/send mailer-client (:email event) (str "Hi " (:user-name event) ", your grade in the quiz is: " (:grade event))))))
 
 (defmethod ig/init-key ::quiz-communication
   [_ {:keys [mailer]}]

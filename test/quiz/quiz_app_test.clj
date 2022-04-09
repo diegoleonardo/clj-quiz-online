@@ -14,8 +14,7 @@
     (let [repository                 (repo/->quiz-repository-memory repo/quizes)
           mailer                     (mailer/->mailer-memory (atom []))
           mediator                   (mediator/->handler-mediator (atom []))
-          quiz-corrector-handler     (quiz-corrector/->quiz-corrector {:repository   repository
-                                                                       #_#_:mediator mediator})
+          quiz-corrector-handler     (quiz-corrector/->quiz-corrector {:repository   repository})
           quiz-communication-handler (quiz-communication/->quiz-communication {:mailer mailer})
           submit-quiz                (fn [input]
                                        (mdt/register mediator {:event-name "quiz-submitted"
