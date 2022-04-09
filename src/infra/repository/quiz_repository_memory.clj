@@ -21,7 +21,7 @@
   (get-by-id [this id]
     (let [quiz (first (filter #(= (:id-quiz %) id) (:state this)))]
       (if (nil? quiz)
-        (throw (ex-info "Quiz not found" {:causes "Quiz is not inserted on the database"}))
+        (throw (ex-info "Quiz not found" {:causes "Quiz is not inserted into the database"}))
         quiz))))
 
 (defmethod ig/init-key ::repo
