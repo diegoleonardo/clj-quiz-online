@@ -1,5 +1,4 @@
 (ns infra.repository.quiz-repository-memory
-  #_(:refer-clojure :exclude [get])
   (:require [domain.repository.repository :as repo]
             [integrant.core :as ig]))
 

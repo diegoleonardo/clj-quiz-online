@@ -30,17 +30,3 @@
   (s/keys :req-un [:acct/name :acct/id-quiz :acct/user-name :acct/email :acct/answers]))
 
 (def quiz-submitted-schema :unq/quiz-submitted)
-
-#_(s/conform :unq/quiz-submitted
-             {:name "quiz-submitted"
-              :id-quiz 10
-              :user-name "Diego"
-              :email "foo@gmail.com"
-              :answers [{:id 1
-                         :answer "a"}]})
-
-#_(s/valid? :unq/quiz-corrected
-            {:name "quiz-corrected"
-             :user-name "Foo"
-             :email "foo@bar.com"
-             :grade 100})

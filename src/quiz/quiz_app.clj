@@ -7,5 +7,3 @@
   "I don't do a whole lot ... yet."
   [& args]
   (ig/init (config/config)))
-
-#_(-main)
